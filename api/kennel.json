@@ -1,0 +1,79 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "employeeId": 1
+    },
+    {
+      "id": 3,
+      "name": "Simba",
+      "breed": "Black Lab",
+      "employeeId": 1
+    },
+    {
+      "id": 4,
+      "name": "Polo",
+      "breed": "Akita Inu",
+      "employeeId": 3
+    },
+    {
+      "id": 5,
+      "name": "Ashe",
+      "breed": "Akita/Husky Mix",
+      "employeeId": 1
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "J. Quin Smith",
+      "role": "Marketing"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Chandler Turner",
+      "role": "Lead Physician"
+    },
+    {
+      "name": "Gradi Ellis",
+      "role": "General Surgeon",
+      "id": 5
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "area": "Nashville",
+      "address": "500 Puppy Way"
+    },
+    {
+      "id": 2,
+      "area": "Hermitage",
+      "address": "2504 Fine Lane"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Chelsea Smith",
+      "returnTime": "3:30pm"
+    },
+    {
+      "id": 2,
+      "name": "Champ Sportsman",
+      "returnTime": "10:45am"
+    },
+    {
+      "id": 3,
+      "name": "Slugger Chiefer",
+      "returnTime": "1:00pm"
+    },
+    {
+      "name": "Jeff the Impaler",
+      "returnTime": "11:00am",
+      "id": 4
+    }
+  ]
+}
