@@ -36,3 +36,12 @@ small {
   nav .container a:hover {
     color: maroon;
   }
+
+  nav span {
+    cursor: pointer;
+    text-decoration: underline;
+ }
+ 
+ nav span:hover {
+  color: maroon;
+ }

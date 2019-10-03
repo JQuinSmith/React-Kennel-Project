@@ -37,6 +37,18 @@ class Kennel extends Component {
     });
   }
 
+  clearUser = () => {
+    localStorage.clear()
+
+    this.setState({
+      user: this.isAuthenticated()
+    });
+  }
+
+
+
+  //pass `clearUser()` as props to the **`<NavBar>`** component
+
   componentDidMount() {
     this.setState({
       user: this.isAuthenticated()
@@ -46,12 +58,13 @@ class Kennel extends Component {
   render() {
     return (
       <>
-        <NavBar user={this.state.user} />
+        <NavBar user={this.state.user} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
           setUser={this.setUser} />
       </>
     )
   }
 }
+
 
 export default Kennel
