@@ -7,12 +7,6 @@
       "employeeId": 1
     },
     {
-      "id": 3,
-      "name": "Simba",
-      "breed": "Black Lab",
-      "employeeId": 1
-    },
-    {
       "id": 4,
       "name": "Polo",
       "breed": "Akita Inu",
@@ -33,8 +27,8 @@
     },
     {
       "id": 3,
-      "name": "Dr. Chandler Turner",
-      "role": "Lead Physician"
+      "name": "Chandler Turner",
+      "role": "Lead Surgeon"
     },
     {
       "name": "Gradi Ellis",

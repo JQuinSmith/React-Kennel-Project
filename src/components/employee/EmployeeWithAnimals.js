@@ -23,7 +23,13 @@ class EmployeeWithAnimals extends Component {
     }
 
     componentDidMount() {
-       this.deleteAnimal()
+        EmployeeManager.getWithAnimals(this.props.match.params.employeeId)
+                    .then((APIResult) => {
+                        this.setState({
+                            employee: APIResult,
+                            animals: APIResult.animals
+            })
+        })
     }
 
     render() {

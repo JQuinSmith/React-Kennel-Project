@@ -48,7 +48,9 @@ import EmployeeManager from '../../modules/EmployeeManager'
                 {this.state.employees.map(employee =>
                     <EmployeeCard key={employee.id}
                                   employee={employee}
-                                  deleteEmployee={this.deleteEmployee}/>)}
+                                  deleteEmployee={this.deleteEmployee}
+                                  {...this.props}
+                                  />)}
             </div>
             </>
         )

@@ -52,7 +52,8 @@ class AnimalList extends Component {
                         <AnimalCard key={animal.id}
                             animal={animal}
                             deleteAnimal={this.deleteAnimal}
-                            {...this.props} />)}
+                            {...this.props}
+                            />)}
                 </div>
             </>
         )

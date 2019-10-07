@@ -7,20 +7,21 @@ import Home from './home/Home'
 // import EmployeeCard from './employee/EmployeeCard'
 // import OwnerCard from './owner/OwnerCard'
 import AnimalList from './animal/AnimalList'
-import EmployeeList from './employee/EmployeeList'
-import LocationList from './location/LocationList'
-import OwnerList from './owner/OwnerList'
-import AnimalDetail from './animal/AnimalDetail'
-import LocationDetail from './location/LocationDetail'
-// import EmployeeDetail from './employee/EmployeeDetail'
-import OwnerDetail from './owner/OwnerDetail'
 import AnimalForm from './animal/AnimalForm'
+import AnimalDetail from './animal/AnimalDetail'
 import AnimalEditForm from './animal/AnimalEditForm'
+import EmployeeList from './employee/EmployeeList'
 import EmployeeForm from './employee/EmployeeForm'
+// import EmployeeDetail from './employee/EmployeeDetail'
+import EmployeeEditForm from './employee/EmployeeEditForm'
 import EmployeeWithAnimals from './employee/EmployeeWithAnimals'
+import LocationList from './location/LocationList'
+import LocationDetail from './location/LocationDetail'
+import LocationEditForm from './location/LocationEditForm'
+import OwnerList from './owner/OwnerList'
+import OwnerDetail from './owner/OwnerDetail'
 import OwnerForm from './owner/OwnerForm'
-import AnimalManager from '../modules/AnimalManager'
-import AnimalCard  from './animal/AnimalCard'
+import OwnerEditForm from './owner/OwnerEditForm'
 import Login from './auth/Login'
 
 
@@ -70,9 +71,11 @@ class ApplicationViews extends Component {
         <Route exact path="/locations" render={(props) => {
             return <LocationList {...props} />
         }} />
-        <Route path="/locations/:locationId(\d+)" render={(props) => {
-          // Pass the locationlId to the locationDetailComponent
+        <Route exact path="/locations/:locationId(\d+)" render={(props) => {
           return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props} />
+        }} />
+        <Route path="/locations/:locationId(\d+)/edit" render={(props) => {
+          return <LocationEditForm {...props} />
         }} />
         <Route exact path="/employees" render={(props) => {
           if (this.props.user) {
@@ -87,6 +90,9 @@ class ApplicationViews extends Component {
         <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
           return <EmployeeWithAnimals {...props} />
         }} />
+        <Route path="/employees/:employeeId(\d+)/edit" render={(props) => {
+          return <EmployeeEditForm {...props} />
+        }} />
         <Route exact path="/owners" render={(props) => {
           if (this.props.user) {
             return <OwnerList {...props} />
@@ -97,9 +103,13 @@ class ApplicationViews extends Component {
         <Route path="/owners/new" render={(props) => {
           return <OwnerForm {...props} />
         }} />
-        <Route path="/owners/:ownerId(\d+)" render={(props) => {
+        <Route exact path="/owners/:ownerId(\d+)" render={(props) => {
           // Pass the locationlId to the locationDetailComponent
           return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)} {...props} />
+        }} />
+        <Route path="/owners/:ownerId(\d+)/edit" render={(props) => {
+          // Pass the locationlId to the locationDetailComponent
+          return <OwnerEditForm {...props} />
         }} />
 
       </React.Fragment>

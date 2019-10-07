@@ -16,7 +16,7 @@ import './animal/Animal.css'
 class Kennel extends Component {
   //On startup, there is no user (user: false)
   state = {
-    user: false
+    user: localStorage.getItem("credentials") !== null
   }
 
   // Check if credentials are in local storage
@@ -49,11 +49,11 @@ class Kennel extends Component {
 
   //pass `clearUser()` as props to the **`<NavBar>`** component
 
-  componentDidMount() {
-    this.setState({
-      user: this.isAuthenticated()
-    })
-  }
+  // componentDidMount() {
+  //   this.setState({
+  //     user: this.isAuthenticated()
+  //   })
+  // }
 
   render() {
     return (
